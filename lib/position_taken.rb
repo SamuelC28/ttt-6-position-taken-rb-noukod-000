@@ -7,19 +7,9 @@ def display_board(board = [" ", " ", " ", " ", " ", " ", " ", " ", " "])
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
-
+# check for empty cells
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " " || board[index] == "")
-end
-
-def valid_move?(board, index)
-
-  if index.between?(0,8) && !position_taken?(board, index)
-      puts 'this is a valid move'
-    return true
-  else
-   return false
-  end
 end
 
 def turn_count(board)
